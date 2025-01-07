@@ -27,7 +27,7 @@ export default function Home() {
       </div>
 
       {/* VIP Signup Section - Add the id attribute here */}
-      <div id="VipSignup" className="w-11/12 max-w-7xl mx-auto pt-16 pb-16">
+      <div className="w-11/12 max-w-7xl mx-auto pt-16 pb-16">
         <VipSignup />
       </div>
 

@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const VipSignup = () => {
   return (
-    <div className="bg-white rounded-lg shadow-lg w-11/12 md:w-3/4 lg:w-2/3 mx-auto my-8 p-6">
+    <div id="vip-signup" className="bg-white rounded-lg shadow-lg w-11/12 md:w-3/4 lg:w-2/3 mx-auto my-8 p-6">
       {/* Header */}
       <h2 className="text-2xl md:text-3xl font-bold text-red-500 text-center mb-4">
         A GUIDE ON HOW TO JOIN VIP 🎯

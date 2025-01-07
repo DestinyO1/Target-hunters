@@ -1,8 +1,9 @@
+// VipButton.js
+
 "use client";
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-scroll";
 
 const slideInFromBottom = {
   hidden: { y: 100, opacity: 0 },
@@ -10,6 +11,14 @@ const slideInFromBottom = {
 };
 
 const VipButton: React.FC = () => {
+  const handleButtonClick = () => {
+    // Get the top position of the VipSignup element
+    const vipSignupElement = document.getElementById('vip-signup');
+    if (vipSignupElement) {
+      vipSignupElement.scrollIntoView({ behavior: 'smooth' }); 
+    }
+  };
+
   return (
     <motion.div
       variants={slideInFromBottom}
@@ -17,14 +26,15 @@ const VipButton: React.FC = () => {
       animate="visible"
       transition={{ duration: 1 }}
     >
-      {/* Scroll to the VipSignup section when the button is clicked */}
-      <Link to="VipSignup" smooth={true} duration={500}>
-        <button className="bg-red-500 hover:bg-red-600 active:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg text-lg transition">
-          Become a VIP
-        </button>
-      </Link>
+      <button 
+        className="bg-red-500 hover:bg-red-600 active:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg text-lg transition"
+        onClick={handleButtonClick} 
+      >
+        Become a VIP
+      </button>
     </motion.div>
   );
 };
 
 export default VipButton;
+
