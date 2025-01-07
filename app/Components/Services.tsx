@@ -52,12 +52,16 @@ export default function Services() {
     },
   ];
 
-  const Feature = ({ description, icon }: { description: string; icon: JSX.Element }) => (
-    <div className="p-4 border rounded-lg flex flex-col items-center text-center">
-      <div className="mb-4 text-red-500">{icon}</div>
-      <p>{description}</p>
-    </div>
-  );
+
+const Feature = ({ description, icon }: { description: string; icon: React.ReactNode }) => (
+  <div className="p-4 border rounded-lg flex flex-col items-center text-center">
+    <div className="mb-4 text-red-500">{icon}</div>
+    <p>{description}</p>
+  </div>
+);
+
+
+
 
   return (
     <div>
